@@ -1,0 +1,11 @@
+from collections import deque
+customQue = deque(maxlen=4)
+customQue.append(1)
+customQue.append(1)
+customQue.append(1)
+customQue.append(1)
+print(customQue)
+print(customQue.pop())
+print(customQue)
+customQue.clear()
+print(customQue)
