@@ -1,17 +1,25 @@
 def changeLetter(string, key):
+    list = []
     newKey = key % 26
-    for i in string:
-        print(ord(i), newKey)
-        letterPositon = ord(i) + newKey
-        print(letterPositon)
+    n = len(string)
+    for i in range(n):
+        letterPositon = ord(string[i]) + newKey
         if letterPositon <= 122:
-            string = string.replace(i, chr(letterPositon))
+            list.append(chr(letterPositon))
+            print('jai')
         else:
-            string = string.replace(i, chr(97 + letterPositon % 122))
+            list.append(chr(96 + letterPositon % 122))
 
-    return string
+    return ''.join(list)
 
-str = 'abc'
+str = 'xyz'
+print(2%26)
 print(changeLetter(str, 2))
 print(ord('z'))
-
+#
+#
+# string = 'hai'
+# string() = 'a'
+# print(string[1])
+for i in range(65, 123):
+    print(chr(i), end=" ")
