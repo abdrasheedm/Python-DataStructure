@@ -1,3 +1,3 @@
 # Python-practice
 
-my python workouts
+my python DataStructure workouts
