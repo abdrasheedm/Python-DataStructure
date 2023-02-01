@@ -51,7 +51,7 @@ class SLink:
 
 
 
-array = [1, 2, 2, 3, 3, 4, 5]
+array = [1, 2, 2, 3, 3, 4, 5, 5]
 SlinkedL = SLink()
 for i in array:
     SlinkedL.insertSLL(i)

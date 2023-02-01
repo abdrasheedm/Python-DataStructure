@@ -57,7 +57,7 @@ def deleteString(root, string, index):
 
     canThisNodeBeDeleted = deleteString(currentNode, string, index + 1)
     if canThisNodeBeDeleted:
-        root.children.pop(ch)
+        # root.children.pop(ch)
         return True
     else:
         return False

@@ -120,6 +120,20 @@ def deleteEntireBH(rootNode):
     rootNode.customList = None
 
 
+
+def replace(rootnode, value, heapType):
+    if rootnode is None:
+        return
+    else:
+        print(rootnode)
+        rootnode.customList[1] = value
+        heapifyTreeInsert(rootnode, rootnode.heapSize, heapType)
+        return
+
+
+
+
+
 newBinaryHeap = Heap(5)
 insertNode(newBinaryHeap, 4, "Max")
 insertNode(newBinaryHeap, 5, "Max")
@@ -136,4 +150,8 @@ print("-------------------------------")
 print(extractNode(newBinaryHeap, "Max"))
 print("-------------------------------")
 deleteEntireBH(newBinaryHeap)
+levelOrderTraversal(newBinaryHeap)
+
+print("----------------------------------")
+replace(newBinaryHeap, 10, "Min")
 levelOrderTraversal(newBinaryHeap)

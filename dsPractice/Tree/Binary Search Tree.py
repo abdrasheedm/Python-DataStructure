@@ -1,8 +1,10 @@
+import queueWithLinkedL as queue
 class BSTNode:
     def __init__(self, data):
         self.data = data
         self.leftChild = None
         self.rightChild = None
+
 
 def insertNode(rootNode, nodeValue):
     if rootNode.data == None:
@@ -41,6 +43,23 @@ def postOrderTraversal(rootNode):
     postOrderTraversal(rootNode.leftChild)
     postOrderTraversal(rootNode.rightChild)
     print(rootNode.data)
+
+
+def levelOrderTraversal(rootNode):
+    if not rootNode:
+        return
+    else:
+        customQueue = queue.Queue()
+        customQueue.enqueue(rootNode)
+        while not (customQueue.isEmpty()):
+            root = customQueue.dequeue()
+            print(root.value.data)
+            if (root.value.leftChild is not None):
+                customQueue.enqueue(root.value.leftChild)
+
+            if (root.value.rightChild is not None):
+                customQueue.enqueue(root.value.rightChild)
+
 
 
 def searchNode(rootNode, nodeValue):
@@ -99,18 +118,18 @@ def deleteBST(rootNode):
 
 
 newBST = BSTNode(None)
-print(insertNode(newBST, ))
-print(insertNode(newBST, 0))
-print(insertNode(newBST, 0))
-print(insertNode(newBST, 0))
-print(insertNode(newBST, 0))
-print(insertNode(newBST, 0))
+print(insertNode(newBST, 20))
+print(insertNode(newBST, 1))
+print(insertNode(newBST, 3))
+print(insertNode(newBST, 5))
+print(insertNode(newBST, 7))
+print(insertNode(newBST, 8000))
 
-preOrderTraversal(newBST)
+levelOrderTraversal(newBST)
 print("------------------------------------")
 # inOrderTraversal(newBST)
 # print("------------------------------------")
-# postOrderTraversal(newBST)
-
-deleteNode(newBST, 8000)
-preOrderTraversal(newBST)
+postOrderTraversal(newBST)
+#
+# deleteNode(newBST, 8000)
+# preOrderTraversal(newBST)
