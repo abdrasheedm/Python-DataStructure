@@ -10,7 +10,6 @@ class Graph:
         else:
             print("there no vertex")
 
-
     def dfs(self, vertex):
         visited = [vertex]
         stack = [vertex]
@@ -19,8 +18,8 @@ class Graph:
             print(pop_vertex)
             for adjacent_vertex in self.gdict[pop_vertex]:
                 if adjacent_vertex not in visited:
-                    visited.append(adjacent_vertex)
                     stack.append(adjacent_vertex)
+                    visited.append(adjacent_vertex)
 
 
 
