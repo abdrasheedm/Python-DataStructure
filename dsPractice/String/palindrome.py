@@ -11,5 +11,5 @@ def palindromCheck(string):
         print("string is not palindrome")
 
 
-name = 'hah'
+name = 'hahah'
 palindromCheck(name)
